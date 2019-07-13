@@ -1,0 +1,37 @@
+.ticker-container {
+    display: inline-block;
+    margin: auto;
+}
+li {
+    list-style: none;
+    display: flex;
+}
+li span {
+    padding: 5px;
+    border: 1px solid #aaa;
+}
+.name, .updated-time {
+    min-width: 100px;
+}
+.green {
+    color: #fff;
+    background-color: green;
+}
+.green::after {
+    content:  '  ▲';
+    position: absolute;
+    right: 10px;
+}
+.red {
+    color: #fff;
+    background-color: red;
+}
+.red::after {
+    content:  '  ▼';
+    position: absolute;
+    right: 10px;
+}
+.red, .green, .white {
+    min-width: 200px;
+    position: relative;
+}
