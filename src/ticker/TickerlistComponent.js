@@ -9,7 +9,7 @@ class TickerlistComponent extends Component {
                 <span className="updated-time">Updated</span>
             </li>
         );
-        console.log(this.props.rates);
+        // console.log(this.props.rates);
         for(let [name,price,color,updated] of this.props.rates) {
             rates.push(
                 <li>

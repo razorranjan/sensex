@@ -22,6 +22,11 @@ li span {
     position: absolute;
     right: 10px;
 }
+.green::before {
+    content:  '  ▲';
+    position: absolute;
+    left: 10px;
+}
 .red {
     color: #fff;
     background-color: red;
@@ -30,6 +35,11 @@ li span {
     content:  '  ▼';
     position: absolute;
     right: 10px;
+}
+.red::before {
+    content:  '  ▼';
+    position: absolute;
+    left: 10px;
 }
 .red, .green, .white {
     min-width: 200px;

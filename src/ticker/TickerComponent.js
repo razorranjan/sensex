@@ -12,44 +12,35 @@ class TickerComponent extends Component {
     }
     handleData(data) {
         let result = JSON.parse(data);
-        console.log(result);
         let today = new Date();
         let currenttime = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        // console.log([...new Set(result.map(x => x[0]))]);
         if(this.state.exchangerates === '') {
             result.forEach(
                 ([name, price],index) => {
+                    result[index][1] = parseFloat(result[index][1]).toFixed(2);
                     result[index][2] = 'white';
                     result[index][3] = currenttime;
                 }
             );
             this.setState({exchangerates: result});
             this.setState({oldexchangerates: result});
-            // console.log(this.state.exchangerates);
         } else {
             this.setState({exchangerates: result});
             let oldrates = this.state.oldexchangerates;
             result.forEach(
                 ([name, price],index) => {
-                    // console.log(`${name}: ${price}`)
                     oldrates.forEach(([oldname,oldprice],indexold) => {
                         if((oldname === name) && (oldprice > price)) {
-                            oldrates[indexold][1] = price;
+                            oldrates[indexold][1] = parseFloat(price).toFixed(2);
                             oldrates[indexold][2] = 'red';
                             oldrates[indexold][3] = currenttime;
-                            // console.log(`${oldname}: ${oldprice} <<<------ ${name}: ${price}`);
                         } else if((oldname === name) && (oldprice < price)) {
-                            oldrates[indexold][1] = price;
+                            oldrates[indexold][1] = parseFloat(price).toFixed(2);
                             oldrates[indexold][2] = 'green';
                             oldrates[indexold][3] = currenttime;
-                            // console.log(`${oldname}: ${oldprice} ------>>> ${name}: ${price}`);
-                        } else if((oldname !== name) && (oldprice != price)) {
-                            // oldrates.push(result[index]);
-                            // oldrates[index][2] = 'white';
-                            // oldrates[index][3] = currenttime;break;
+                        } else if((oldname !== name) && (oldprice !== price)) {
                         }
                     });
-                    // console.log(oldrates);
                 }
             );
             this.setState({exchangerates: oldrates});
@@ -58,7 +49,6 @@ class TickerComponent extends Component {
     render() { 
         return ( 
             <React.Fragment>
-                {/* Count: <strong>{this.state.count}</strong> */}
                 <WebSocket url='ws://stocks.mnet.website' onMessage={this.handleData.bind(this)}/>
                 <TickerlistComponent rates={this.state.exchangerates}></TickerlistComponent>
             </React.Fragment>
