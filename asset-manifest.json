@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/sensex/static/css/main.280a9f29.chunk.css",
-    "main.js": "/sensex/static/js/main.d5d76d1d.chunk.js",
-    "main.js.map": "/sensex/static/js/main.d5d76d1d.chunk.js.map",
+    "main.css": "/sensex/static/css/main.e4c68d83.chunk.css",
+    "main.js": "/sensex/static/js/main.a0ad6091.chunk.js",
+    "main.js.map": "/sensex/static/js/main.a0ad6091.chunk.js.map",
     "runtime~main.js": "/sensex/static/js/runtime~main.22c52f38.js",
     "runtime~main.js.map": "/sensex/static/js/runtime~main.22c52f38.js.map",
     "static/js/2.87779fe4.chunk.js": "/sensex/static/js/2.87779fe4.chunk.js",
     "static/js/2.87779fe4.chunk.js.map": "/sensex/static/js/2.87779fe4.chunk.js.map",
     "index.html": "/sensex/index.html",
-    "precache-manifest.20d6261a8d27b4d0f765e9bb87ea0767.js": "/sensex/precache-manifest.20d6261a8d27b4d0f765e9bb87ea0767.js",
+    "precache-manifest.05fc17498613c70dcd844f8b5b6f2431.js": "/sensex/precache-manifest.05fc17498613c70dcd844f8b5b6f2431.js",
     "service-worker.js": "/sensex/service-worker.js",
-    "static/css/main.280a9f29.chunk.css.map": "/sensex/static/css/main.280a9f29.chunk.css.map"
+    "static/css/main.e4c68d83.chunk.css.map": "/sensex/static/css/main.e4c68d83.chunk.css.map"
   }
 }
